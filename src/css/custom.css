@@ -16,6 +16,7 @@
   --circles: #6eadff65;
   --color: #1C1E21;
   --search-local-modal-background: #e9eef2;
+  --ifm-navbar-shadow: 0 1px 2px 0 #dadde1;
 }
 
 [data-theme='dark'] {
@@ -32,6 +33,7 @@
   --color: #E3E3E3;
   --search-local-modal-background: rgba(255, 255, 255, 0.2);
   --transparent: #e3e3e300;
+  --ifm-navbar-shadow: 0 1px 2px 0 #444950;
 }
 
 
@@ -41,6 +43,7 @@ body {
 
 .navbar {
   background-color: var(--ifm-background-color);
+  box-shadow: var(--ifm-navbar-shadow);
 }
 
 .footer {
@@ -52,12 +55,33 @@ body {
   color: var(--color);
 }
 
+.navbar__items{
+  display: flex;
+  align-items: center;
+}
+
 .navbar__title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
 }
 
 .card {
   background-color: #ebedf018;
+  border-radius: 8px !important;
+}
+
+.pagination-nav__link{
+  border-radius: 6px !important;
+}
+
+.table-of-contents__left-border{
+  border-left: none !important;
+}
+
+.docSidebarContainer_YfHR{
+  border-right: none !important;
 }
 
 .features_t9lD {
@@ -70,14 +94,70 @@ body {
   padding-top: 15px;
 }
 
+.menu__list .menu__list{
+  border-left: 1px solid var(--ifm-toc-border-color);
+  margin-left: 18px;
+  padding-left: 0;
+}
+
 .menu__list-item-collapsible:hover,
 .clean-btn:hover,
-.menu__link:hover {
+.menu__link:hover,
+.breadcrumbs__link:hover {
   background: #8ebaf421 !important;
 }
 
 .menu__link--active,
-.menu__list-item-collapsible--active,
-.breadcrumbs__link {
+.menu__list-item-collapsible--active{
   background: #8ebaf421 !important;
+}
+
+.menu__link{
+  padding: 10px 10px;
+}
+
+.menu__caret{
+  padding: 0.3rem 0.6rem;
+  transform: scale(.8);
+  border-radius: 6px ;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 4px;
+}
+
+.menu__caret:before{
+  width: 0.6rem !important;
+  height: 0.6rem !important;
+}
+
+.breadcrumbs__item--active,
+.breadcrumbs__link{
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.breadcrumbs__item--active
+.breadcrumbs__link{
+  background: #8ebaf421 !important
+}
+
+.navbar__item{
+  margin-right: 18px;
+}
+
+.pagination-nav__sublabel{
+  margin-bottom: 20px;
+}
+
+.backToTopButton_sjWU{
+  background-color:  var(--ifm-color-primary) !important;
+}
+
+.backToTopButton_sjWU:hover{
+  background-color: var(--ifm-color-primary-dark) !important;
+}
+
+.backToTopButton_sjWU::after{
+  mask: var(--ifm-menu-link-sublist-icon) 50% / 2.2rem 2.2rem no-repeat !important;
+  background-color: rgb(255, 255, 255) !important;
 }
