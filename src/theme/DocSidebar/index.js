@@ -2,41 +2,16 @@ import React, { useEffect } from 'react';
 import DocSidebar from '@theme-original/DocSidebar';
 
 import {
-  Boxes,
-  Smartphone,
-  DownloadCloud,
-  Users,
-  BookOpen,
-  Code,
-  Star,
-  Package,
-  Folder,
+  AppWindow,
   Settings,
-  Terminal,
-  PenTool,
-  Plug,
-  Utensils
+  SquareTerminal
 } from 'lucide-react';
 
 function getIconForItem(item) {
   if (item.label && typeof item.label === 'string') {
-    if (item.label.includes('Tutorial - Basics')) return <Boxes size={18} />;
-    if (item.label.includes('Create a Document')) return <Smartphone size={18} />;
-    if (item.label.includes('Blog')) return <DownloadCloud size={18} />;
-    if (item.label.includes('Reseller')) return <Users size={18} />;
-    if (item.label.includes('Guias adicionales')) return <BookOpen size={18} />;
-    if (item.label.includes('Devs')) return <Code size={18} />;
-    if (item.label.includes('Esenciales')) return <Star size={18} />;
-    if (item.label.includes('Complementarios')) return <Package size={18} />;
-    if (item.label.includes('Rubro')) return <Folder size={18} />;
-    if (item.label.includes('Específicos')) return <PenTool size={18} />;
+    if (item.label.includes('Comandos y accesos')) return <SquareTerminal size={18} />;
+    if (item.label.includes('Herramientas')) return <AppWindow size={18} />;
     if (item.label.includes('Configuración')) return <Settings size={18} />;
-    if (item.label.includes('API')) return <Terminal size={18} />;
-    if (item.label.includes('Custom')) return <PenTool size={18} />;
-    if (item.label.includes('Devops')) return <Terminal size={18} />;
-    if (item.label.includes('Manual de Usuario')) return <BookOpen size={18} />;
-    if (item.label.includes('Plugins')) return <Plug size={18} />;
-    if (item.label.includes('Mozo.pe')) return <Utensils size={18} />;
   }
   return null;
 }
