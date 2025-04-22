@@ -65,7 +65,7 @@ export default function Hero() {
             variants={variants}
           >
             <a href="/docs/intro" className={styles.startButton}>
-              Empezar
+              Comenzar
             </a>
           </motion.div>
         </div>

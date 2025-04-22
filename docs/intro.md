@@ -2,46 +2,70 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Manual Devtools
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Las **Herramientas para Desarrolladores de Chrome** son un conjunto integral de herramientas diseñadas específicamente para desarrolladores web, las cuales están completamente integradas en el navegador Google Chrome. Estas herramientas son esenciales para cualquier profesional que busque optimizar, depurar y mejorar la experiencia de desarrollo web. Permiten realizar ediciones en tiempo real, identificar y corregir errores rápidamente, y analizar el rendimiento de una página web, todo desde un solo entorno.
 
-## Getting Started
+Con las Herramientas para Desarrolladores, puedes depurar código CSS y JavaScript, analizar el rendimiento de carga de una página, y realizar pruebas de dispositivos móviles, entre otras funcionalidades. El uso eficiente de estas herramientas no solo acelera el proceso de desarrollo, sino que también garantiza que el producto final sea más robusto, rápido y compatible con los diferentes entornos de usuario.
 
-Get started by **creating a new site**.
+## Abrir Herramientas para Desarrolladores
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Hay varias formas de abrir las **Herramientas para desarrolladores**, dependiendo de las necesidades del usuario:
 
-### What you'll need
+- **Para inspeccionar un elemento del DOM o editar CSS**, haz clic derecho sobre un componente de la página y selecciona *Inspeccionar*. Alternativamente, puedes usar los atajos de teclado:
+  - *Comando + Opción + C* (Mac)
+  - *Control + Mayúsculas + C* (Windows, Linux, y ChromeOS)
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- **Para ver los mensajes registrados o ejecutar JavaScript**, presiona:
+  - *Comando + Opción + J* (Mac)
+  - *Control + Mayúsculas + J* (Windows, Linux, y ChromeOS)
 
-## Generate a new site
+Para obtener más detalles sobre cómo abrir las herramientas y flujos, consulta la documentación oficial de Chrome.
 
-Generate a new Docusaurus site using the **classic template**.
+## Explorando Devtools
 
-The classic template will automatically be added to your project after you run the command:
+La interfaz de las Herramientas para Desarrolladores puede parecer compleja al principio, debido a la cantidad de paneles disponibles. Sin embargo, al familiarizarte con los diferentes paneles, descubrirás que estas herramientas pueden mejorar significativamente tu flujo de trabajo. Los paneles principales incluyen:
 
-```bash
-npm init docusaurus@latest docusaurus classic
-```
+### Modo de dispositivo 
+   Permite simular la visualización en dispositivos móviles y emular sus sensores.  
+   ![Modo de dispositivo](/img/intro/device-mode.png)
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Panel de elementos   
+   Te permite inspeccionar y modificar el DOM y el CSS, editar clases y reglas de estilo, y realizar ajustes en tiempo real.  
+   ![Panel de elementos](/img/intro/elements-panel.png)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Panel de la consola
+   Para visualizar mensajes registrados, errores, y ejecutar JavaScript directamente desde la consola.  
+   ![Panel de la consola](/img/intro/console-panel.png)
 
-## Start your site
+### Panel de fuentes
+   Sirve para depurar JavaScript, conservar cambios entre recargas de página, ejecutar fragmentos de código, y realizar modificaciones en archivos. Además, permite hacer seguimiento de cambios y mantener un flujo eficiente.
+   ![Panel de fuentes](/img/intro/sources-panel.png)
 
-Run the development server:
+### Panel de red
+   Permite inspeccionar y depurar la actividad de red, ver las solicitudes de recursos y analizar sus tiempos de respuesta.  
+   ![Panel de red](/img/intro/network-panel.png)
 
-```bash
-cd docusaurus
-npm run start
-```
+### Panel de grabadora 
+   Graba, reproduce y mide los flujos de usuarios en la página, permitiendo optimizar la experiencia de navegación.  
+   ![Panel de grabadora](/img/intro/recorder-panel.png)
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Panel de rendimiento
+   Ayuda a analizar y mejorar el rendimiento de carga y de ejecución de la página web.  
+   ![Panel de rendimiento](/img/intro/performance-panel.png)
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+### Panel de memoria
+   Te permite encontrar y corregir problemas de memoria, como fugas, que afectan el rendimiento de la página.
+   ![Panel de memoria](/img/intro/memory-panel.png)
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Panel de la aplicación  
+   Inspecciona todos los recursos cargados, como bases de datos, almacenamiento local y de sesión, cookies, caché de aplicaciones, imágenes, fuentes y hojas de estilo.  
+   ![Panel de la aplicación](/img/intro/application-panel.png)
+
+### Panel de seguridad
+   Permite depurar problemas de contenido mixto, certificados y otros problemas relacionados con la seguridad del sitio.  
+   ![Panel de seguridad](/img/intro/security-panel.png)
+
+---
+
+Este manual está diseñado para guiarte en cada una de estas funcionalidades, proporcionando pasos detallados para que puedas aprovechar al máximo las herramientas que Chrome pone a disposición. Con el uso adecuado de estas herramientas, lograrás optimizar tu flujo de trabajo, resolver problemas y desarrollar sitios web más eficientes.
