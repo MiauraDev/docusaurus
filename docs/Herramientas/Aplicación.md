@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 ---
 
-# Elementos
+# Aplicación
 
 Docusaurus can manage multiple versions of your docs.
 

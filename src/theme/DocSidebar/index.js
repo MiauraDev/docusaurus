@@ -13,7 +13,7 @@ import {
   HardDriveUpload,
   Database,
   Zap,
-  Webcam
+  Webcam,
 } from 'lucide-react';
 
 function getIconForItem(item) {
@@ -28,7 +28,7 @@ function getIconForItem(item) {
     if (item.label.includes('Rendimiento')) return <MonitorCheck size={18} />;  
     if (item.label.includes('Memoria')) return <HardDriveUpload size={18} />;  
     if (item.label.includes('Aplicación')) return <Database size={18} />;  
-    if (item.label.includes('Faro')) return <Zap size={18} />;   
+    if (item.label.includes('Lighthouse')) return <Zap size={18} />;   
     if (item.label.includes('Grabadora')) return <Webcam size={18} />;   
   }
   return null;

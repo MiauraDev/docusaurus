@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 8
 ---
 
-# Elementoss
+# Lighthouse
 
 Docusaurus can manage multiple versions of your docs.
 
