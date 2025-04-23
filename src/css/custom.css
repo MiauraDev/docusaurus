@@ -96,7 +96,7 @@ body {
 
 .menu__list .menu__list{
   border-left: 1px solid var(--ifm-toc-border-color);
-  margin-left: 18px;
+  margin-left: 23.18px;
   padding-left: 0;
 }
 
@@ -114,6 +114,7 @@ body {
 
 .menu__link{
   padding: 10px 10px;
+  padding-left: 15px;
 }
 
 .menu__caret{
