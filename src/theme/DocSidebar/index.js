@@ -11,7 +11,15 @@ function getIconForItem(item) {
   if (item.label && typeof item.label === 'string') {
     if (item.label.includes('Comandos y accesos')) return <SquareTerminal size={18} />;
     if (item.label.includes('Herramientas')) return <AppWindow size={18} />;
-    if (item.label.includes('Configuración')) return <Settings size={18} />;
+    if (item.label.includes('Elementos')) return <Settings size={18} />;
+    if (item.label.includes('Fuentes')) return <Settings size={18} />;
+    if (item.label.includes('Consola')) return <Settings size={18} />;
+    if (item.label.includes('Red')) return <Settings size={18} />;   
+    if (item.label.includes('Rendimiento')) return <Settings size={18} />;  
+    if (item.label.includes('Memoria')) return <Settings size={18} />;  
+    if (item.label.includes('Aplicación')) return <Settings size={18} />;  
+    if (item.label.includes('Grabadora')) return <Settings size={18} />;   
+    if (item.label.includes('Grabadora')) return <Settings size={18} />;   
   }
   return null;
 }

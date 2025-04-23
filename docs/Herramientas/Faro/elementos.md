@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+# Elementos
 
 Docusaurus can manage multiple versions of your docs.
 
@@ -10,7 +10,7 @@ Docusaurus can manage multiple versions of your docs.
 
 Release a version 1.0 of your project:
 
-```bash
+```bashs
 npm run docusaurus docs:version 1.0
 ```
 
@@ -45,7 +45,7 @@ export default {
 
 The docs version dropdown appears in your navbar:
 
-![Docs Version Dropdown](./img/docsVersionDropdown.png)
+
 
 ## Update an existing version
 

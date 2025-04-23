@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Translate your site
+# Lugar de trabajo
 
 Let's translate `docs/intro.md` to French.
 
@@ -69,9 +69,7 @@ export default {
 };
 ```
 
-The locale dropdown now appears in your navbar:
 
-![Locale Dropdown](./img/localeDropdown.png)
 
 ## Build your localized site
 
