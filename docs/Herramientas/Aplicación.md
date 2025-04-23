@@ -4,52 +4,101 @@ sidebar_position: 7
 
 # Aplicación
 
-Docusaurus can manage multiple versions of your docs.
+El panel **Application** te permite inspeccionar, modificar y depurar varios aspectos de tu aplicación web, incluidos su manifiesto, trabajadores de servicio, almacenamiento y datos en caché.
 
-## Create a docs version
+## Descripción general
 
-Release a version 1.0 of your project:
+El panel **Application** se divide en las siguientes secciones y submenús:
 
-```bashs
-npm run docusaurus docs:version 1.0
-```
+### 1. Aplicación
+- **Manifiesto**: Muestra el archivo `manifest.json` de manera fácil de usar. También muestra errores y advertencias si los hay.
+- **Trabajadores en primer plano**: Permite inspeccionar y depurar trabajadores de primer plano, emulando eventos push y actualizando un servicio.
+- **Almacenamiento**: Muestra un gráfico circular que distribuye la memoria entre almacenamiento en caché, IndexedDB y los trabajadores del servicio. También puedes borrar los datos del sitio y simular una cuota de almacenamiento personalizada.
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+### 2. Almacenamiento
+- Consulta y edita diferentes métodos de almacenamiento que usa tu app web.
+  - **Local y Almacenamiento de sesiones**: Permite seleccionar un origen y editar los pares clave-valor.
+  - **IndexedDB**: Inspecciona bases de datos y almacenes de objetos.
+  - **Cookies**: Permite editar y seleccionar cookies de un origen.
+  - **Almacenamiento compartido**: Inspecciona los pares clave-valor.
+  - **Caché**: Permite inspeccionar, filtrar y borrar recursos de la caché.
 
-Your docs now have 2 versions:
+### 3. Servicios en segundo plano
+- **Memoria caché atrás/adelante**: Prueba la memoria caché de atrás/adelante y detecta problemas relacionados.
+- **Obtención en segundo plano**: Registra la actividad de la API de Background Fetch.
+- **Background sync**: Registra la actividad de la API de sincronización en segundo plano.
+- **Notificaciones**: Registra mensajes push.
+- **Controlador de pagos**: Registra eventos del controlador de pagos.
+- **Sincronización periódica en segundo plano**: Registra eventos clave de la sincronización periódica.
+- **Cargas especulativas**: Depura las cargas especulativas.
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
+### 4. Frames
+- Divide las páginas en vistas múltiples mostrando detalles como Seguridad, Aislamiento, Política de Seguridad del Contenido, y Disponibilidad de API.
 
-## Add a Version Dropdown
+![Menu Consola](/img/Aplicación/frames-section.png)
 
-To navigate seamlessly across versions, add a version dropdown.
+## Abrir el panel Application
 
-Modify the `docusaurus.config.js` file:
+1. Abre las **Herramientas para desarrolladores**.
+2. Para abrir el menú de comandos:
+    - macOS: `Comando + Mayúsculas + P`
+    - Windows/Linux/ChromeOS: `Control + Mayúsculas + P`
+3. Escribe `application`, selecciona **Show Application** y presiona **Intro**.
 
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
+![Menu Consola](/img/Aplicación/application-panel.png)
 
-The docs version dropdown appears in your navbar:
+Alternativamente:
+- Haz clic en **Más paneles** y selecciona **Aplicación**.
+- O selecciona **Más herramientas > Aplicación** desde el menú de opciones.
 
+## Manifiesto de la app web
 
+El manifiesto de tu app web es necesario para agregar la app a la pantalla principal de dispositivos móviles y escritorios. A través de la pestaña **Manifiesto** del panel **Application** puedes inspeccionarlo.
 
-## Update an existing version
+![Menu Consola](/img/Aplicación/manifest.png)
 
-It is possible to edit versioned docs in their respective folder:
+- Puedes ver la fuente del manifiesto, controlar los íconos, y obtener detalles de la instalación.
+- La sección **Instalabilidad** muestra errores relacionados con el manifiesto, como íconos no cargados.
 
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+### Instalar y probar la app
+
+Para activar la instalación:
+- Haz clic en el botón **Instalar** en la barra de direcciones de Chrome.
+
+## Trabajadores de Servicio
+
+Los **trabajadores de servicio** son secuencias de comandos que el navegador ejecuta en segundo plano. Pueden ser inspeccionados y depurados en la pestaña **Service Workers**.
+
+### Funciones clave
+- **Sin conexión**: Pone DevTools en modo sin conexión.
+- **Actualizar/Desactivar**: Permite actualizar o evitar el trabajador de servicio.
+- **Eventos de notificación**: Simula eventos de sincronización y notificaciones push.
+
+## Almacenamiento en caché
+
+La pestaña **Almacenamiento en caché** muestra los recursos almacenados en caché por el **service worker** y permite ver sus encabezados y contenidos.
+
+### Borrar recursos
+- Puedes seleccionar un recurso y borrarlo directamente desde la pestaña.
+
+![Menu Consola](/img/Aplicación/selecting-resource.png)
+
+### Probar la memoria caché atrás/adelante:
+- Utiliza el botón **Probar memoria caché** para verificar que los recursos se almacenen correctamente.
+
+![Menu Consola](/img/Aplicación/expanded.png)
+
+## IndexedDB y Web SQL
+
+Inspecciona y edita las bases de datos de **IndexedDB** y **Web SQL**. Puedes interactuar con las bases de datos, ver tablas y borrar datos a través de las herramientas de DevTools.
+
+![Menu Consola](/img/Aplicación/web-sql.png)
+
+## Cookies
+
+En la pestaña **Cookies**, puedes inspeccionar, editar y eliminar cookies asociadas con un origen.
+
+![Menu Consola](/img/Aplicación/cookies.png)
+
+- **Editar Cookies**: Modifica los valores de nombre, dominio, tamaño, etc.
+- **Filtrar**: Busca cookies específicas por su nombre o valor.
