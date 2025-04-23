@@ -44,7 +44,7 @@ El menú de comandos te permite realizar capturas de pantalla de tu sitio web.
 Nota: La captura de área no funcionará si DevTools no está acoplado a la ventana.
 
 
-![Otras acciones](/img/ejecutar-comandos/area-screenshot.gif)
+![Captura](/img/ejecutar-comandos/area-screenshot.gif)
 
 
 Por ejemplo para tomar una captura de pantalla de un área, sigue estos pasos:
