@@ -4,52 +4,104 @@ sidebar_position: 9
 
 # Grabadora
 
-Docusaurus can manage multiple versions of your docs.
+El panel **Grabadora** te permite grabar, medir y editar los flujos de usuarios para depurar y mejorar las rutas de conversión en tu aplicación web.
 
-## Create a docs version
+## Descripción general
 
-Release a version 1.0 of your project:
+El panel **Grabadora** te permite realizar las siguientes acciones:
 
-```bashs
-npm run docusaurus docs:version 1.0
-```
+- **Grabar y reproducir flujos de usuarios**: Inicia una grabación de eventos en tu sitio web, luego reproduce el flujo grabado, saltando entre pasos. Puedes ralentizar la reproducción para entender mejor el comportamiento.
+- **Editar y depurar flujos de usuarios**: Modifica los pasos de la grabación y establece puntos de interrupción. Puedes ejecutar el flujo de usuarios paso a paso y ver el código paralelo.
+- **Generar perfiles de rendimiento**: Mide el rendimiento de un flujo de usuarios grabado generando un perfil y visualizando un informe en el panel de **Rendimiento**.
+- **Compartir y exportar flujos de usuarios**: Exporta un flujo grabado en formatos como JSON o Puppeteer, o impórtalo para reutilizarlo.
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+## Cómo abrir el panel de Grabadora
 
-Your docs now have 2 versions:
+1. **Abre las Herramientas para desarrolladores**.
+2. En el menú de comandos:
+   - macOS: `Comando + Mayúsculas + P`
+   - Windows/Linux/ChromeOS: `Control + Mayúsculas + P`
+3. Escribe **Recorder panel**, selecciona **Show Recorder panel** y presiona **Intro**.
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
+   ![Menu Lighthouse](/img/Grabadora/cmd-recorder.png)
 
-## Add a Version Dropdown
+Alternativamente, puedes acceder desde **Más opciones > Más herramientas > Panel de la grabadora**.
 
-To navigate seamlessly across versions, add a version dropdown.
+## Grabación de un flujo de usuarios
 
-Modify the `docusaurus.config.js` file:
+### Paso 1: Iniciar una grabación
+1. Haz clic en **Iniciar nueva grabación**.
+2. Nombra la grabación, por ejemplo, **Confirmación de la compra de café**.
+3. Comienza la grabación realizando los pasos del flujo (agregar productos al carrito, ir al carrito, completar la compra).
+4. Finaliza la grabación haciendo clic en **Finaliza la grabación**.
 
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
+### Paso 2: Reproducir el flujo grabado
+1. Haz clic en **Volver a reproducir** para ejecutar el flujo grabado.
+2. La grabadora intentará hacer clic en los elementos cuando estén disponibles. Si es necesario, puedes ralentizar la repetición para depurar.
 
-The docs version dropdown appears in your navbar:
+## Medición del rendimiento de un flujo de usuarios
+
+<video width="100%" height="480" controls>
+  <source src="/img/Grabadora/flujo.mp4" type="video/mp4"/>
+  Tu navegador no soporta el elemento de video.
+</video>
+
+1. Haz clic en **Medir rendimiento** para evaluar el rendimiento del flujo grabado.
+2. El rendimiento se medirá en el panel **Rendimiento**, donde podrás ver métricas web y detectar oportunidades de mejora.
+
+## Edición de pasos
+
+Puedes editar los pasos de la grabación, agregar nuevos o quitar los innecesarios:
+
+- **Expandir pasos**: Ve detalles de cada acción, como el selector y la posición en X/Y.
+
+   ![Menu Lighthouse](/img/Grabadora/recorder-panel-capp.png)
+
+- **Agregar y quitar selectores**: Modifica los selectores de cada paso para ajustarlos a tus necesidades.
+
+   ![Menu Lighthouse](/img/Grabadora/devtools-recorder.png)
+
+- **Agregar y quitar pasos**: Puedes añadir nuevos pasos o eliminar los que se grabaron incorrectamente.
+
+   ![Menu Lighthouse](/img/Grabadora/edit-selector.png)
+
+## Simulación de red lenta
+
+Puedes simular una conexión de red lenta en las opciones de configuración de reproducción. Esto te permite verificar el comportamiento del flujo bajo condiciones de red más lentas, como 3G.
+
+## Exportación y compartición de flujos
+
+- **Exportar flujos**: Puedes exportar un flujo grabado en formato JSON o en secuencias de comandos de Puppeteer.
+- **Importar flujos**: Puedes importar flujos grabados desde un archivo JSON para volver a reproducirlos.
+
+## Depuración de flujos
+
+La **Grabadora** permite depurar flujos de usuarios ralentizando la repetición, estableciendo puntos de interrupción y ejecutando pasos de forma manual.
+
+- **Ralentizar la repetición**: Ajusta la velocidad de repetición para facilitar la depuración.
+
+   ![Menu Lighthouse](/img/Grabadora/slow-replay.png)
+
+- **Establecer puntos de interrupción**: Coloca puntos de interrupción en los pasos de la grabación para detener la ejecución y examinar el estado en ese momento.
+
+   ![Menu Lighthouse](/img/Grabadora/execution-pause.png)
 
 
+## Personalización de la Grabadora
 
-## Update an existing version
+Puedes personalizar las combinaciones de teclas y extender las capacidades de la grabadora con **extensiones**.
 
-It is possible to edit versioned docs in their respective folder:
+### Combinaciones de teclas:
+1. Abre la **Configuración** y ve a **Accesos directos**.
+2. Personaliza las combinaciones para navegar más rápido por la Grabadora.
 
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+### Instalar extensiones:
+Instala extensiones desde la **Chrome Web Store** para agregar opciones personalizadas, como exportación y repetición personalizadas.
+
+   ![Menu Lighthouse](/img/Grabadora/replay-extensions.png)
+
+## Solución de problemas
+
+Si no ves las opciones de exportación o repetición después de instalar una extensión, asegúrate de:
+- Abre una nueva pestaña del navegador después de instalar la extensión.
+- Verifica que la extensión esté habilitada y no bloqueada por el administrador.
