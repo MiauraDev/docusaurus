@@ -2,54 +2,29 @@
 sidebar_position: 1
 ---
 
-# fdfd
+# Panel
 
-Docusaurus can manage multiple versions of your docs.
+El **panel de Elementos** proporciona una interfaz completa para inspeccionar y manipular el **DOM** (Document Object Model) de una página web. Utilizando el árbol del DOM, que refleja la estructura de un documento HTML, puedes seleccionar nodos DOM específicos y modificarlos de manera interactiva.
 
-## Create a docs version
+## Herramientas y Pestañas en el Panel
 
-Release a version 1.0 of your project:
+- **Estilos**: Permite ver y depurar las reglas de CSS aplicadas a un elemento desde todas las hojas de estilo. También te permite buscar CSS no válido, anulado o inactivo, y editar elementos como agregar una declaración o aplicar una clase.
+- **Cálculo**: Muestra las propiedades resueltas aplicadas a un elemento cuando Chrome las renderiza.
+- **Diseño**: Ofrece opciones para modificar las superposiciones de cuadrícula y **flexbox**.
+- **Objetos de escucha de eventos**: Muestra todos los objetos de escucha de eventos y sus atributos, permitiendo encontrar la fuente de los objetos de escucha y filtrarlos según su tipo (pasivos o bloqueantes).
+- **Puntos de interrupción de DOM**: Permite gestionar los puntos de interrupción en los cambios del DOM, habilitarlos, inhabilitarlos o eliminarlos.
+- **Propiedades**: Permite inspeccionar y ordenar las propiedades propias y heredadas de un nodo DOM seleccionado.
+- **Accesibilidad**: Muestra elementos con etiquetas **ARIA** y sus propiedades, y permite inspeccionar el árbol de accesibilidad (experimental).
 
-```bashs
-npm run docusaurus docs:version 1.0
-```
+## Abrir el Panel de Elementos
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+Por defecto, cuando abres las Herramientas para desarrolladores, el panel Elementos se abre automáticamente. También puedes inspeccionar cualquier nodo en la página para abrir el panel automáticamente.
 
-Your docs now have 2 versions:
-
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
-
-## Add a Version Dropdown
-
-To navigate seamlessly across versions, add a version dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The docs version dropdown appears in your navbar:
-
-
-
-## Update an existing version
-
-It is possible to edit versioned docs in their respective folder:
-
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+Para abrir el panel Elementos de forma manual, haz lo siguiente:
+1. Abre las **Herramientas para desarrolladores**.
+2. Para abrir el menú de comandos:
+   - **macOS**: Presiona `Comando` + `Mayúsculas` + `P`
+   - **Windows, Linux y ChromeOS**: Presiona `Control` + `Mayúsculas` + `P`
+   ![Menu elementos](/img/Elementos/menu-elements.png)
+3. Comienza a escribir "Elements", selecciona **Show Elements** y presiona **Intro**.
+4. El panel Elementos aparecerá en el panel lateral inferior de las Herramientas para desarrolladores.
