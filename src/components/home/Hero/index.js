@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
+import Link from '@docusaurus/Link'
 
 const variants = {
   visible: (i) => ({
@@ -64,9 +65,9 @@ export default function Hero() {
             animate="visible"
             variants={variants}
           >
-            <a href="/docs/intro" className={styles.startButton}>
+            <Link to="/docs/intro" className={styles.startButton}>
               Comenzar
-            </a>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

@@ -162,3 +162,20 @@ body {
   mask: var(--ifm-menu-link-sublist-icon) 50% / 2.2rem 2.2rem no-repeat !important;
   background-color: rgb(255, 255, 255) !important;
 }
+
+.navbar-sidebar__item{
+  background-color: var(--ifm-background-color) !important;
+
+}
+
+.navbar-sidebar__brand{  
+  background-color: var(--ifm-background-color) !important;
+
+}
+
+
+@media (max-width: 380px) {
+  .navbar__title{
+    display: none;
+  }
+}
